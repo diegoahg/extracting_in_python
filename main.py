@@ -62,15 +62,14 @@ print("Getting data from wiki Chile...")
 dfs = pd.read_html('https://es.wikipedia.org/wiki/Chile', header = 1, attrs={'class': 'wikitable col1izq col2der col3der col4der col5der col6izq'}, encoding='utf-8')
 df = dfs[0]
 
-print("Cleaning data")
+print("Cleaning the data")
 df = clean_title(df)
 df = clean_data(df)
 
 print("Calculating the population percentage...")
 df = set_percentage_population(df)
 
-print(df)
+print("Exporting to CSV...")
 df.to_csv(r'organizacion_territoral_de_chile.csv', index=False, encoding='utf-8')
-# https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
-# pip install -r requirements.txt
-# Python >=3.5.3
+
+print("The Program has finished")
