@@ -1,6 +1,14 @@
 import pandas as pd
 
 def clean_title(df):
+    """
+    Clean al titles of the columns and delete 
+    unnesessary columans.
+
+    Parameters
+        ----------
+        df : is the DataFrame that will be modificated and returned
+    """
     del df['Mapa administrativo']
     df.rename(columns={'Región':'Región',
                 'Población [8]​':'Población',
@@ -12,6 +20,15 @@ def clean_title(df):
     return df
 
 def clean_data(df):
+     """
+    Clean all dataFrame of caracters unnesesary. Then cast the colums to specific
+    data type.
+
+    Parameters
+        ----------
+        df : is the DataFrame that will be modificated and returned
+    """
+
     df = df.iloc[:-1,].copy()
     df.replace(to_replace = r'\u200b', value = '', regex = True, inplace=True)
     df.replace(to_replace = r'\xa0', value = '', regex = True, inplace=True)
