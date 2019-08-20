@@ -1,6 +1,6 @@
-# Scraping in Wikipedia using panda
+# Extracting data in Wikipedia using panda
 
-This is a simple example to use pandas to scrap in the web by getting data and then clean it to obtain the necessary data.
+This is a simple example to use pandas to extract data in the web by getting the necessary data and the process it.
 
 In this case, It gets the data from the table of the Territorial organization of Chile in the website https://es.wikipedia.org/wiki/Chile. Then, It adds a new column of population percentages each Region. Finally, The program export to CSV file with the data.
 
